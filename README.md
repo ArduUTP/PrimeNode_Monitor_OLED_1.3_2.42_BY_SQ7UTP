@@ -141,6 +141,7 @@ Po poprawnym wgraniu i restarcie, na ekranie zobaczysz logo startowe, a następn
 4. Kliknij **Configure WiFi**.
 5. Wybierz swoją domową sieć WiFi i wpisz hasło.
 6. W polu **Adres API Hotspota** wpisz adres IP swojego Orange Pi (PrimeNode).
+                      **Przykładowo:**
    * ⚠️ **WAŻNE:** Musisz dopisać końcówkę `/api.php`!
    * ✅ Poprawny wpis: `http://192.168.1.50/api.php`
    * ❌ Błędny wpis: `192.168.1.50`
