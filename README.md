@@ -51,12 +51,12 @@ Wybierz wersję oprogramowania pasującą do Twojego wyświetlacza.
 
 | Wersja / Version | Opis / Description | Plik / File |
 | :--- | :--- | :--- |
-| **1.3" SH1106 (I2C)** | Standardowy mały OLED 1.3 cala (4 piny). | [📥 Pobierz .bin](firmware/PrimeNode_Monitor_OLED1.3_By_SQ7UTP.ino.bin) |
-| **2.42" SSD1306 (SPI)** | Duży OLED 2.42 cala (złącze SPI, 7 pinów). | [📥 Pobierz .bin](firmware/PrimeNode_Monitor_OLED2.42_By_SQ7UTP.ino.bin) |
+| **1.3" SH1106 (I2C)** | Standardowy mały OLED 1.3 cala (4 piny). | [📥 Pobierz .bin](https://github.com/ArduUTP/PrimeNode_Monitor_OLED_1.3_2.42_BY_SQ7UTP/raw/refs/heads/main/firmware/PrimeNode_Monitor_OLED1.3_By_SQ7UTP.ino.bin) |
+| **2.42" SSD1306 (SPI)** | Duży OLED 2.42 cala (złącze SPI, 7 pinów). | [📥 Pobierz .bin](https://github.com/ArduUTP/PrimeNode_Monitor_OLED_1.3_2.42_BY_SQ7UTP/raw/refs/heads/main/firmware/PrimeNode_Monitor_OLED2.42_By_SQ7UTP.ino.bin) |
 
 > **Narzędzie do wgrywania:**
 > Do wgrania pliku `.bin` użyj darmowego programu **NodeMCU PyFlasher**.
-> [📥 Pobierz NodeMCU PyFlasher (Windows)](tools/NodeMCU-PyFlasher.rar) *lub* [Pobierz z oficjalnej strony](https://github.com/marcelstoer/nodemcu-pyflasher/releases)
+> [📥 Pobierz NodeMCU PyFlasher (Windows)](https://github.com/ArduUTP/PrimeNode_Monitor_OLED_1.3_2.42_BY_SQ7UTP/raw/refs/heads/main/tools/NodeMCU-PyFlasher.rar) *lub* [Pobierz z oficjalnej strony](https://github.com/marcelstoer/nodemcu-pyflasher/releases)
 
 ---
 
