@@ -7,6 +7,15 @@ Wspieramy dwie wersje sprzętowe: kompaktową **1.3"** oraz dużą, czytelną **
 
 ---
 
+## 📝 Changelog / Co nowego (Aktualizacja: Luty 2026)
+W najnowszej wersji oprogramowania wprowadzono szereg istotnych usprawnień stabilności i estetyki:
+* **🛡️ Smart Watchdog:** Dodano inteligentne zabezpieczenie. Jeśli Hotspot straci zasilanie lub zniknie z sieci, Monitor po 10 sekundach automatycznie wyczyści "zamrożone" dane rozmówcy i przejdzie w tryb awaryjny (OFFLINE + Zegar).
+* **⚖️ Dynamiczne centrowanie (Reflektor):** Nazwa aktualnego połączenia reflektora na górnej belce ekranu jest teraz zawsze idealnie wyśrodkowana, niezależnie od jej długości.
+* **🌙 Ochrona ekranu (Burn-in protection):** Po zakończeniu korespondencji i przejściu w tryb zegara, ekran automatycznie obniża jasność/kontrast do sprzętowego minimum, chroniąc matrycę OLED przed wypalaniem.
+* **🚦 Poprawa stabilności statusu:** Wyeliminowano efekt "nerwowego mrugania" napisu ONLINE/OFFLINE przy chwilowych, milisekundowych wahaniach pingu w sieci WiFi.
+
+---
+
 ## 📸 Podgląd / Preview
 
 ![Monitor Animation](images/monitor_demo.gif)
