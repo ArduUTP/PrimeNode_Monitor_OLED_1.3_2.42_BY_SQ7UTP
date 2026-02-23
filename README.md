@@ -7,6 +7,15 @@ Wspieramy dwie wersje sprzętowe: kompaktową **1.3"** oraz dużą, czytelną **
 
 ---
 
+## 📝 Changelog / Co nowego (Aktualizacja: Luty 2026)
+W najnowszej wersji oprogramowania wprowadzono szereg istotnych usprawnień stabilności i estetyki:
+* **🛡️ Smart Watchdog:** Dodano inteligentne zabezpieczenie. Jeśli Hotspot straci zasilanie lub zniknie z sieci, Monitor po 10 sekundach automatycznie wyczyści "zamrożone" dane rozmówcy i przejdzie w tryb awaryjny (OFFLINE + Zegar).
+* **⚖️ Dynamiczne centrowanie (Reflektor):** Nazwa aktualnego połączenia reflektora na górnej belce ekranu jest teraz zawsze idealnie wyśrodkowana, niezależnie od jej długości.
+* **🌙 Ochrona ekranu (Burn-in protection):** Po zakończeniu korespondencji i przejściu w tryb zegara, ekran automatycznie obniża jasność/kontrast do sprzętowego minimum, chroniąc matrycę OLED przed wypalaniem.
+* **🚦 Poprawa stabilności statusu:** Wyeliminowano efekt "nerwowego mrugania" napisu ONLINE/OFFLINE przy chwilowych, milisekundowych wahaniach pingu w sieci WiFi.
+
+---
+
 ## 📸 Podgląd / Preview
 
 ![Monitor Animation](images/monitor_demo.gif)
@@ -51,12 +60,12 @@ Wybierz wersję oprogramowania pasującą do Twojego wyświetlacza.
 
 | Wersja / Version | Opis / Description | Plik / File |
 | :--- | :--- | :--- |
-| **1.3" SH1106 (I2C)** | Standardowy mały OLED 1.3 cala (4 piny). | [📥 Pobierz .bin](firmware/PrimeNode_Monitor_v1.0_1.3_OLED.bin) |
-| **2.42" SSD1306 (SPI)** | Duży OLED 2.42 cala (złącze SPI, 7 pinów). | [📥 Pobierz .bin](firmware/PrimeNode_Monitor_v1.0_2.42_SPI.bin) |
+| **1.3" SH1106 (I2C)** | Standardowy mały OLED 1.3 cala (4 piny). | [📥 Pobierz .bin](https://github.com/ArduUTP/PrimeNode_Monitor_OLED_1.3_2.42_BY_SQ7UTP/raw/refs/heads/main/firmware/PrimeNode_Monitor_OLED1.3_By_SQ7UTP.ino.bin) |
+| **2.42" SSD1306 (SPI)** | Duży OLED 2.42 cala (złącze SPI, 7 pinów). | [📥 Pobierz .bin](https://github.com/ArduUTP/PrimeNode_Monitor_OLED_1.3_2.42_BY_SQ7UTP/raw/refs/heads/main/firmware/PrimeNode_Monitor_OLED2.42_By_SQ7UTP.ino.bin) |
 
 > **Narzędzie do wgrywania:**
 > Do wgrania pliku `.bin` użyj darmowego programu **NodeMCU PyFlasher**.
-> [📥 Pobierz NodeMCU PyFlasher (Windows)](tools/NodeMCU-PyFlasher-4.0-x64.exe) *lub* [Pobierz z oficjalnej strony](https://github.com/marcelstoer/nodemcu-pyflasher/releases)
+> [📥 Pobierz NodeMCU PyFlasher (Windows)](https://github.com/ArduUTP/PrimeNode_Monitor_OLED_1.3_2.42_BY_SQ7UTP/raw/refs/heads/main/tools/NodeMCU-PyFlasher.rar) *lub* [Pobierz z oficjalnej strony](https://github.com/marcelstoer/nodemcu-pyflasher/releases)
 
 ---
 
@@ -141,6 +150,7 @@ Po poprawnym wgraniu i restarcie, na ekranie zobaczysz logo startowe, a następn
 4. Kliknij **Configure WiFi**.
 5. Wybierz swoją domową sieć WiFi i wpisz hasło.
 6. W polu **Adres API Hotspota** wpisz adres IP swojego Orange Pi (PrimeNode).
+                      **Przykładowo:**
    * ⚠️ **WAŻNE:** Musisz dopisać końcówkę `/api.php`!
    * ✅ Poprawny wpis: `http://192.168.1.50/api.php`
    * ❌ Błędny wpis: `192.168.1.50`
