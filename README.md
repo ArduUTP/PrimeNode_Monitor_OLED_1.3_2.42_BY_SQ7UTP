@@ -175,7 +175,7 @@ Po poprawnym wgraniu i restarcie, na ekranie zobaczysz logo startowe, a następn
 Jeśli w przyszłości zmienisz router lub zechcesz podłączyć monitor pod inny hotspot, nie musisz wgrywać kodu na nowo! Wystarczy skorzystać z wbudowanego Panelu WWW.
 
 <p align="center">
-  <img src="images/web_config.jpg" width="600" alt="Web Config Panel">
+  <img src="images/web_config.jpeg" width="600" alt="Web Config Panel">
 </p>
 
 1. Sprawdź adres IP swojego urządzenia w logach routera domowego.
