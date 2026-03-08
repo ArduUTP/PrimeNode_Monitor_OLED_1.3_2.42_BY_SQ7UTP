@@ -7,12 +7,13 @@ Wspieramy dwie wersje sprzętowe: kompaktową **1.3"** oraz dużą, czytelną **
 
 ---
 
-## 📝 Changelog / Co nowego (Aktualizacja: Luty 2026)
-W najnowszej wersji oprogramowania wprowadzono szereg istotnych usprawnień stabilności i estetyki:
+## 📝 Changelog / Co nowego (Aktualizacja: Luty/Marzec 2026)
+W najnowszej wersji oprogramowania wprowadzono potężne usprawnienia ułatwiające obsługę i poprawiające estetykę:
+* **☁️ Auto OTA Updates:** Urządzenie przy każdym starcie automatycznie łączy się z GitHubem i sprawdza dostępność nowej wersji oprogramowania. Jeśli taka istnieje, pobiera ją bezprzewodowo, wyświetlając dedykowany pasek postępu.
+* **🌐 Web Config (Panel WWW):** Dodano wygodny panel sterowania w przeglądarce! Możesz teraz zmienić adres API hotspota lub zdalnie zresetować sieć WiFi w locie, wpisując IP monitorka w przeglądarkę, bez konieczności uruchamiania trybu AP.
+* **📜 Animowany tekst (Marquee):** Długie nazwy reflektorów (powyżej 10 znaków) nie są już ucinane – tekst automatycznie i estetycznie przewija się na górnej belce ekranu.
 * **🛡️ Smart Watchdog:** Dodano inteligentne zabezpieczenie. Jeśli Hotspot straci zasilanie lub zniknie z sieci, Monitor po 10 sekundach automatycznie wyczyści "zamrożone" dane rozmówcy i przejdzie w tryb awaryjny (OFFLINE + Zegar).
-* **⚖️ Dynamiczne centrowanie (Reflektor):** Nazwa aktualnego połączenia reflektora na górnej belce ekranu jest teraz zawsze idealnie wyśrodkowana, niezależnie od jej długości.
 * **🌙 Ochrona ekranu (Burn-in protection):** Po zakończeniu korespondencji i przejściu w tryb zegara, ekran automatycznie obniża jasność/kontrast do sprzętowego minimum, chroniąc matrycę OLED przed wypalaniem.
-* **🚦 Poprawa stabilności statusu:** Wyeliminowano efekt "nerwowego mrugania" napisu ONLINE/OFFLINE przy chwilowych, milisekundowych wahaniach pingu w sieci WiFi.
 
 ---
 
@@ -27,8 +28,9 @@ W najnowszej wersji oprogramowania wprowadzono szereg istotnych usprawnień stab
 * **📊 Live Status:** Wyświetla aktualny tryb (Online/Offline), temperaturę CPU i nazwę sieci.
 * **📡 Active Talker:** Natychmiast pokazuje Znak (Callsign) i Grupę (TG) osoby nadającej.
 * **🕒 Smart Clock:** Gdy nikt nie rozmawia, wyświetla duży, czytelny zegar z datą.
-* **📶 WiFi Manager:** Prosta konfiguracja przez telefon (Brak konieczności edycji kodu!).
-* **🎨 Visuals:** Logo startowe PNL, animowany pasek ładowania, wygaszacz ekranu.
+* **📶 WiFi Manager & Web Panel:** Konfiguracja sieci przez AP oraz nowoczesny panel www do zmiany ustawień w locie (Brak konieczności edycji kodu!).
+* **☁️ Aktualizacje OTA:** Bezobsługowe, automatyczne pobieranie najnowszego wsadu prosto z GitHuba z animowanym paskiem postępu.
+* **🎨 Visuals:** Przewijane nazwy, logo startowe PNL, wygaszacz ekranu.
 * **🛠️ Easy Flash:** Dostępny jako gotowy plik `.bin` - nie musisz programować!
 
 ---
@@ -51,6 +53,12 @@ Poniżej przedstawiamy porównanie obu obsługiwanych wersji wyświetlaczy.
 | <img src="images/clock.jpg" width="100%"> | <img src="images/2clock.jpg" width="100%"> |
 | <img src="images/node.jpg" width="100%"> | <img src="images/2node.jpg" width="100%"> |
 
+### 3. Aktualizacja OTA (Over-The-Air)
+
+| Wersja 1.3" (I2C) | Wersja 2.42" (SPI) |
+| :---: | :---: |
+| <img src="images/ota1.3.jpg" width="100%"> | <img src="images/ota2.42.jpg" width="100%"> |
+
 ---
 
 ## 📥 Pobieranie / Download
@@ -60,8 +68,8 @@ Wybierz wersję oprogramowania pasującą do Twojego wyświetlacza.
 
 | Wersja / Version | Opis / Description | Plik / File |
 | :--- | :--- | :--- |
-| **1.3" SH1106 (I2C)** | Standardowy mały OLED 1.3 cala (4 piny). | [📥 Pobierz .bin](https://github.com/ArduUTP/PrimeNode_Monitor_OLED_1.3_2.42_BY_SQ7UTP/raw/refs/heads/main/firmware/PrimeNode_Monitor_OLED1.3_V1.1_By_SQ7UTP.ino.bin) |
-| **2.42" SSD1306 (SPI)** | Duży OLED 2.42 cala (złącze SPI, 7 pinów). | [📥 Pobierz .bin](https://github.com/ArduUTP/PrimeNode_Monitor_OLED_1.3_2.42_BY_SQ7UTP/raw/refs/heads/main/firmware/PrimeNode_Monitor_OLED2.42_V1.1_By_SQ7UTP.ino.bin) |
+| **1.3" SH1106 (I2C)** | Standardowy mały OLED 1.3 cala (4 piny). | [📥 Pobierz .bin](https://github.com/ArduUTP/PrimeNode_Monitor_OLED_1.3_2.42_BY_SQ7UTP/blob/main/firmware/PrimeNode_Monitor_OLED1.3_V1.2_By_SQ7UTP.bin) |
+| **2.42" SSD1306 (SPI)** | Duży OLED 2.42 cala (złącze SPI, 7 pinów). | [📥 Pobierz .bin](https://github.com/ArduUTP/PrimeNode_Monitor_OLED_1.3_2.42_BY_SQ7UTP/blob/main/firmware/PrimeNode_Monitor_OLED2.42_V1.2_By_SQ7UTP.bin) |
 
 > **Narzędzie do wgrywania:**
 > Do wgrania pliku `.bin` użyj darmowego programu **NodeMCU PyFlasher**.
@@ -134,6 +142,8 @@ Nie potrzebujesz Arduino IDE.
 
 Po poprawnym wgraniu i restarcie, na ekranie zobaczysz logo startowe, a następnie komunikat o trybie konfiguracji (AP).
 
+### 1. Pierwsza konfiguracja (Tryb AP)
+
 | 1. Tryb AP (1.3") | 2. Tryb AP (2.42") |
 | :---: | :---: |
 | <img src="images/wifi.jpg" width="100%"> | <img src="images/2wifi.jpg" width="100%"> |
@@ -159,6 +169,18 @@ Po poprawnym wgraniu i restarcie, na ekranie zobaczysz logo startowe, a następn
 | Połączono (1.3") | Połączono (2.42") |
 | :---: | :---: |
 | <img src="images/wifi2.jpg" width="100%"> | <img src="images/2wifi2.jpg" width="100%"> |
+
+### 2. Zmiana ustawień w locie (Panel WWW)
+
+Jeśli w przyszłości zmienisz router lub zechcesz podłączyć monitor pod inny hotspot, nie musisz wgrywać kodu na nowo! Wystarczy skorzystać z wbudowanego Panelu WWW.
+
+<p align="center">
+  <img src="images/web_config.jpg" width="600" alt="Web Config Panel">
+</p>
+
+1. Sprawdź adres IP swojego urządzenia w logach routera domowego.
+2. Wpisz ten adres IP w przeglądarce na komputerze lub telefonie (np. `http://192.168.1.100`).
+3. W panelu możesz wygodnie zmienić adres docelowy API lub użyć czerwonego przycisku, aby całkowicie skasować ustawienia WiFi i ponownie wywołać portal konfiguracyjny (Tryb AP).
 
 ---
 
