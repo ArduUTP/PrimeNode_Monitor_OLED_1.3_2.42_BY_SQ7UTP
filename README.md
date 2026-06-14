@@ -7,13 +7,13 @@ Wspieramy dwie wersje sprzętowe: kompaktową **1.3"** oraz dużą, czytelną **
 
 ---
 
-## 📝 Changelog / Co nowego (Aktualizacja: Luty/Marzec 2026)
-W najnowszej wersji oprogramowania wprowadzono potężne usprawnienia ułatwiające obsługę i poprawiające estetykę:
+## 📝 Changelog / Co nowego (Aktualizacja: Marzec 2026)
+W najnowszej wersji oprogramowania (V1.2) wprowadzono potężne usprawnienia ułatwiające obsługę i poprawiające żywotność sprzętu:
+* **🔋 Zaawansowane zarządzanie matrycą (Nowość!):** Wbudowano prawdziwe, sprzętowe ściemnianie (Hardware Dimming) dla układów SSD1306/SSD1309 oraz inteligentny wygaszacz ekranu (Screensaver). Ekran potrafi teraz obniżyć jasność lub całkowicie się wyłączyć po zadanym czasie spoczynku. Gdy tylko ktoś naciśnie PTT, matryca w ułamku sekundy wraca do pełnej jasności.
+* **🎛️ Rozbudowany Panel WWW:** Web Config zyskał nowy, bogaty interfejs! Z poziomu przeglądarki możesz teraz włączać/wyłączać wygaszacz, ustawiać progi jasności (25%, 50%, 75%) i regulować czasy opóźnień za pomocą wygodnych suwaków i rozwijanych list.
 * **☁️ Auto OTA Updates:** Urządzenie przy każdym starcie automatycznie łączy się z GitHubem i sprawdza dostępność nowej wersji oprogramowania. Jeśli taka istnieje, pobiera ją bezprzewodowo, wyświetlając dedykowany pasek postępu.
-* **🌐 Web Config (Panel WWW):** Dodano wygodny panel sterowania w przeglądarce! Możesz teraz zmienić adres API hotspota lub zdalnie zresetować sieć WiFi w locie, wpisując IP monitorka w przeglądarkę, bez konieczności uruchamiania trybu AP.
 * **📜 Animowany tekst (Marquee):** Długie nazwy reflektorów (powyżej 10 znaków) nie są już ucinane – tekst automatycznie i estetycznie przewija się na górnej belce ekranu.
-* **🛡️ Smart Watchdog:** Dodano inteligentne zabezpieczenie. Jeśli Hotspot straci zasilanie lub zniknie z sieci, Monitor po 10 sekundach automatycznie wyczyści "zamrożone" dane rozmówcy i przejdzie w tryb awaryjny (OFFLINE + Zegar).
-* **🌙 Ochrona ekranu (Burn-in protection):** Po zakończeniu korespondencji i przejściu w tryb zegara, ekran automatycznie obniża jasność/kontrast do sprzętowego minimum, chroniąc matrycę OLED przed wypalaniem.
+* **🛡️ Smart Watchdog:** Jeśli Hotspot straci zasilanie lub zniknie z sieci, Monitor po 10 sekundach automatycznie wyczyści "zamrożone" dane rozmówcy i przejdzie w tryb awaryjny (OFFLINE + Zegar).
 
 ---
 
@@ -28,9 +28,9 @@ W najnowszej wersji oprogramowania wprowadzono potężne usprawnienia ułatwiaj�
 * **📊 Live Status:** Wyświetla aktualny tryb (Online/Offline), temperaturę CPU i nazwę sieci.
 * **📡 Active Talker:** Natychmiast pokazuje Znak (Callsign) i Grupę (TG) osoby nadającej.
 * **🕒 Smart Clock:** Gdy nikt nie rozmawia, wyświetla duży, czytelny zegar z datą.
-* **📶 WiFi Manager & Web Panel:** Konfiguracja sieci przez AP oraz nowoczesny panel www do zmiany ustawień w locie (Brak konieczności edycji kodu!).
+* **📶 WiFi Manager & Web Panel:** Konfiguracja sieci przez AP oraz nowoczesny panel www do zmiany zaawansowanych ustawień w locie (Brak konieczności edycji kodu!).
 * **☁️ Aktualizacje OTA:** Bezobsługowe, automatyczne pobieranie najnowszego wsadu prosto z GitHuba z animowanym paskiem postępu.
-* **🎨 Visuals:** Przewijane nazwy, logo startowe PNL, wygaszacz ekranu.
+* **🎨 Visuals:** Przewijane nazwy, logo startowe PNL, inteligentne wygaszanie.
 * **🛠️ Easy Flash:** Dostępny jako gotowy plik `.bin` - nie musisz programować!
 
 ---
@@ -69,7 +69,7 @@ Wybierz wersję oprogramowania pasującą do Twojego wyświetlacza.
 | Wersja / Version | Opis / Description | Plik / File |
 | :--- | :--- | :--- |
 | **1.3" SH1106 (I2C)** | Standardowy mały OLED 1.3 cala (4 piny). | [📥 Pobierz .bin](https://github.com/ArduUTP/PrimeNode_Monitor_OLED_1.3_2.42_BY_SQ7UTP/raw/refs/heads/main/firmware/PrimeNode_Monitor_OLED1.3_V1.2_By_SQ7UTP.bin) |
-| **2.42" SSD1306 (SPI)** | Duży OLED 2.42 cala (złącze SPI, 7 pinów). | [📥 Pobierz .bin](https://github.com/ArduUTP/PrimeNode_Monitor_OLED_1.3_2.42_BY_SQ7UTP/raw/refs/heads/main/firmware/PrimeNode_Monitor_OLED2.42_V1.2_By_SQ7UTP.bin) |
+| **2.42" SSD1306 (SPI)** | Duży OLED 2.42 cala (złącze SPI, 7 pinów). | [📥 Pobierz .bin](https://github.com/ArduUTP/PrimeNode_Monitor_OLED_1.3_2.42_BY_SQ7UTP/raw/refs/heads/main/firmware/PrimeNode_Monitor_OLED2.42_V1.3_By_SQ7UTP.bin) |
 
 > **Narzędzie do wgrywania:**
 > Do wgrania pliku `.bin` użyj darmowego programu **NodeMCU PyFlasher**.
@@ -164,7 +164,7 @@ Po poprawnym wgraniu i restarcie, na ekranie zobaczysz logo startowe, a następn
    * ⚠️ **WAŻNE:** Musisz dopisać końcówkę `/api.php`!
    * ✅ Poprawny wpis: `http://192.168.1.50/api.php`
    * ❌ Błędny wpis: `192.168.1.50`
-7. Kliknij **Save**. Monitor zrestartuje się i połączy z Twoim systemem.
+7. Przejdź w dół, aby skonfigurować opcje wygaszacza ekranu i ściemniania, a następnie kliknij **Save**. Monitor zrestartuje się i połączy z Twoim systemem.
 
 | Połączono (1.3") | Połączono (2.42") |
 | :---: | :---: |
@@ -172,15 +172,16 @@ Po poprawnym wgraniu i restarcie, na ekranie zobaczysz logo startowe, a następn
 
 ### 2. Zmiana ustawień w locie (Panel WWW)
 
-Jeśli w przyszłości zmienisz router lub zechcesz podłączyć monitor pod inny hotspot, nie musisz wgrywać kodu na nowo! Wystarczy skorzystać z wbudowanego Panelu WWW.
+Jeśli w przyszłości zechcesz zmienić ustawienia ochrony matrycy (np. skrócić czas wygaszacza), zmienić router lub podłączyć monitor pod inny hotspot, nie musisz wgrywać kodu na nowo! Wystarczy skorzystać z rozbudowanego, wbudowanego Panelu WWW.
 
 <p align="center">
-  <img src="images/web_config.jpeg" width="600" alt="Web Config Panel">
+  <img src="images/web_config.jpeg" width="45%" alt="Web Config Panel">
+  <img src="images/v1.3.jpg" width="45%" alt="Nowy Panel WWW z suwakami">
 </p>
 
 1. Sprawdź adres IP swojego urządzenia w logach routera domowego.
 2. Wpisz ten adres IP w przeglądarce na komputerze lub telefonie (np. `http://192.168.1.100`).
-3. W panelu możesz wygodnie zmienić adres docelowy API lub użyć czerwonego przycisku, aby całkowicie skasować ustawienia WiFi i ponownie wywołać portal konfiguracyjny (Tryb AP).
+3. W panelu możesz wygodnie zmienić adres docelowy API, dostosować czas pracy ekranu, ustawić próg ściemniania lub użyć czerwonego przycisku, aby całkowicie skasować ustawienia WiFi i wywołać portal konfiguracyjny.
 
 ---
 
