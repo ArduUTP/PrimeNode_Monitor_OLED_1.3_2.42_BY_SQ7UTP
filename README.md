@@ -7,8 +7,8 @@ Wspieramy dwie wersje sprzętowe: kompaktową **1.3"** oraz dużą, czytelną **
 
 ---
 
-## 📝 Changelog / Co nowego (Aktualizacja: Marzec 2026)
-W najnowszej wersji oprogramowania (V1.2) wprowadzono potężne usprawnienia ułatwiające obsługę i poprawiające żywotność sprzętu:
+## 📝 Changelog / Co nowego (Aktualizacja: Czerwiec 2026)
+W najnowszej wersji oprogramowania (V1.4) wprowadzono potężne usprawnienia ułatwiające obsługę i poprawiające żywotność sprzętu:
 * **🔋 Zaawansowane zarządzanie matrycą (Nowość!):** Wbudowano prawdziwe, sprzętowe ściemnianie (Hardware Dimming) dla układów SSD1306/SSD1309 oraz inteligentny wygaszacz ekranu (Screensaver). Ekran potrafi teraz obniżyć jasność lub całkowicie się wyłączyć po zadanym czasie spoczynku. Gdy tylko ktoś naciśnie PTT, matryca w ułamku sekundy wraca do pełnej jasności.
 * **🎛️ Rozbudowany Panel WWW:** Web Config zyskał nowy, bogaty interfejs! Z poziomu przeglądarki możesz teraz włączać/wyłączać wygaszacz, ustawiać progi jasności (25%, 50%, 75%) i regulować czasy opóźnień za pomocą wygodnych suwaków i rozwijanych list.
 * **☁️ Auto OTA Updates:** Urządzenie przy każdym starcie automatycznie łączy się z GitHubem i sprawdza dostępność nowej wersji oprogramowania. Jeśli taka istnieje, pobiera ją bezprzewodowo, wyświetlając dedykowany pasek postępu.
